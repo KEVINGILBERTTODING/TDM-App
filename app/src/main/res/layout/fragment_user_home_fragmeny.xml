@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/greenbg"
+        tools:context=".ui.main.user.home.UserHomeFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/atasboard"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/lrBarang"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="63dp"
+                    android:background="@drawable/kardusjadi"
+                    android:layout_marginTop="22dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/robotobold"
+                    android:textSize="@dimen/_15sdp"
+                    android:background="@color/bg"
+                    android:padding="20dp"
+                    android:text="Daftar Barang" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/atasboard"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/lrTransaksi">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="63dp"
+                    android:background="@drawable/trolijadi"
+                    android:layout_marginTop="22dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/bg"
+                    android:padding="20dp"
+                    android:fontFamily="@font/robotobold"
+                    android:textSize="@dimen/_15sdp"
+                    android:text="Transaksi Bulanan" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.auth.LoginActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@drawable/loginatas"
+        android:id="@+id/gbratas"/>
+
+    <ImageView
+        android:layout_width="109dp"
+        android:layout_height="79dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/koperasi"
+        android:layout_margin="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="90dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="90dp"
+        android:fontFamily="@font/robotobold"
+        android:padding="10dp"
+        android:text="Login"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In untuk mulai"
+        android:layout_below="@id/gbratas"
+        android:textSize="12dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/robotomedium"
+        android:padding="10dp"
+        android:id="@+id/tulisan2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/tulisan2"
+        android:layout_marginTop="20dp"
+        android:id="@+id/lili">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:hint="Username"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/etInputUsername"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/black"
+            android:padding="10dp"
+            android:paddingBottom="100dp"
+            android:hint="Password"
+            android:textSize="14dp"
+            android:id="@+id/etInputPassword"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lili"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_shape"
+        android:fontFamily="@font/robotobold"
+        android:text="Masuk"
+        android:textSize="12dp"
+        android:id="@+id/btnLogin"/>
+
+</RelativeLayout>
