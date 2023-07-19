@@ -29,6 +29,7 @@ import com.example.tdm.databinding.FragmentTransaksiBinding;
 import com.example.tdm.ui.main.user.adapter.barang.SpinnerBarangAdapter;
 import com.example.tdm.ui.main.user.adapter.cart.CartAdapter;
 import com.example.tdm.ui.main.user.adapter.customer.SpinnerCustomerAdapter;
+import com.example.tdm.ui.main.user.history_transaksi.HistoryTransaksiFragment;
 import com.example.tdm.util.ApiConfig;
 import com.example.tdm.util.Constans;
 
@@ -134,6 +135,10 @@ public class TransaksiFragment extends Fragment implements CartAdapter.OnButtonC
             }else {
                 insertCart();
             }
+        });
+
+        binding.btnKirim.setOnClickListener(View -> {
+            transactions();
         });
     }
 
@@ -391,6 +396,41 @@ public class TransaksiFragment extends Fragment implements CartAdapter.OnButtonC
 
             }
         });
+
+    }
+
+    private void transactions() {
+        showProgressBar("Loading", "Memproses transaksi anda", true);
+        userServices.transactions(
+                binding.tvInvoice.getText().toString(),
+                String.valueOf(customerId),
+                total,
+                total,
+                dibayar,
+                String.valueOf(lebih),
+                userId
+
+        ).enqueue(new Callback<ResponseModel>() {
+            @Override
+            public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
+                showProgressBar("", "", false);
+                if (response.isSuccessful() && response.body().getCode() == 200) {
+                    showToast("success", "Berhasil transaksi");
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frameUser, new HistoryTransaksiFragment()).addToBackStack(null)
+                            .commit();
+                }else {
+                    showToast("err", "Gagal transaksi");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseModel> call, Throwable t) {
+                showProgressBar("", "", false);
+                showToast("err", "Periksa koneksi internet anda");
+
+            }
+        });
+
 
     }
 

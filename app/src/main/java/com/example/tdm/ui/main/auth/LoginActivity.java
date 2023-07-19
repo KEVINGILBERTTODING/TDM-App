@@ -52,8 +52,6 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
 
             }
-        }else {
-
         }
 
         listener();
@@ -85,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                                 editor.putBoolean(Constans.LOGGED, true);
                                 editor.putString(Constans.USER_ID, response.body().getUserId());
                                 editor.putString(Constans.username, response.body().getUsername());
-                                editor.putInt(Constans.level, 0);
+                                editor.putInt(Constans.level, Integer.parseInt(response.body().getLevel()));
                                 editor.putString(Constans.name, response.body().getName());
                                 editor.apply();
                                 startActivity(new Intent(LoginActivity.this, MainActivity.class));

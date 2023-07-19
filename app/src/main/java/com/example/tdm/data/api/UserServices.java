@@ -54,6 +54,19 @@ public interface UserServices {
             @Field("stock") Integer stock
     );
 
+    @FormUrlEncoded
+    @POST("user/transactions")
+    Call<ResponseModel> transactions(
+            @Field("invoice") String invoice,
+            @Field("customer_id") String customerId,
+            @Field("total_price") Integer totalPrice,
+            @Field("final_price") Integer finalPrice,
+            @Field("cash") Integer cash,
+            @Field("remaining") String remaining,
+            @Field("user_id") String userId
+
+    );
+
 
 
 

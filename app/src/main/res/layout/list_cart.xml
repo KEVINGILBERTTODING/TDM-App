@@ -79,7 +79,6 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/_9sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                app:cornerRadius="@dimen/_10sdp"
                 android:id="@+id/btnDelete"
                 android:layout_gravity="right"
                 app:backgroundTint="@color/red"
