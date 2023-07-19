@@ -15,14 +15,17 @@ public class ResponseModel implements Serializable {
     private String level;
     @SerializedName("username")
     private String username;
+    @SerializedName("name")
+    private String name;
 
 
-    public ResponseModel(Integer code, String message, String userId, String level, String username) {
+    public ResponseModel(Integer code, String message, String userId, String level, String username, String name) {
         this.code = code;
         this.message = message;
         this.userId = userId;
         this.level = level;
         this.username = username;
+        this.name = name;
     }
 
     public Integer getCode() {
@@ -63,5 +66,13 @@ public class ResponseModel implements Serializable {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

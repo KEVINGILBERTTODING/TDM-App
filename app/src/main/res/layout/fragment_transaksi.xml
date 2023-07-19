@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         xmlns:tools="http://schemas.android.com/tools"
@@ -56,90 +56,166 @@
                         android:textColor="@color/black"
                         android:textSize="15sp"/>
 
-                    <EditText
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="entry tanggal"
-                        android:textSize="20sp"
-                        android:id="@+id/etTanggal"/>
+                        android:hint="Pilih Tanggal"
+                        android:padding="@dimen/_10sdp"
+                        android:background="@drawable/container_edittex"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
+                        android:id="@+id/tvTanggal"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="User"
+                        android:layout_marginTop="@dimen/_5sdp"
                         android:textColor="@color/black"/>
 
-                    <EditText
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="entry user"
-                        android:textSize="20sp"
-                        android:id="@+id/etUser"/>
+                        android:enabled="false"
+                        android:padding="@dimen/_10sdp"
+                        android:background="@drawable/container_edittex"
+                        android:textSize="@dimen/_11sdp"
+                        android:id="@+id/tvUser"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="untuk"
+                        android:layout_marginTop="@dimen/_5sdp"
                         android:textColor="@color/black"/>
 
-                    <EditText
+                    <Spinner
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="entry Untuk"
-                        android:textSize="20sp"
-                        android:id="@+id/etUntuk"/>
+                        android:padding="@dimen/_10sdp"
+                        android:background="@drawable/container_edittex"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
+
+                        android:id="@+id/spCustomer"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Barang"
+                        android:layout_marginTop="@dimen/_5sdp"
                         android:textColor="@color/black" />
 
                     <Spinner
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/shapebg"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:textSize="@dimen/_11sdp"
+
+                        android:background="@drawable/container_edittex"
                         android:id="@+id/spBarang"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Jumlah"
+                        android:layout_marginTop="@dimen/_5sdp"
                         android:textColor="@color/black"/>
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="entry jumlah"
-                        android:textSize="20sp"
+                        android:hint="Jumlah"
+                        android:textSize="@dimen/_11sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:background="@drawable/container_edittex"
+                        android:inputType="number"
+                        android:text="0"
+                        android:layout_marginTop="@dimen/_5sdp"
                         android:id="@+id/etJumlah"/>
+                    
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:icon="@drawable/baseline_add_24"
+                        app:backgroundTint="@color/blue"
+                        android:textColor="@color/white"
+                        android:id="@+id/btnTambah"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:text="Tambah"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daftar Produk"
+                        android:textSize="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/black"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp"
+                        android:background="@drawable/container_edittex"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:id="@+id/rvProduct"/>
+                    
+                
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="invoice"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
                         android:id="@+id/tvInvoice"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="90000"
-                        android:textColor="@color/black"
-                        android:textSize="20dp"
-                        android:id="@+id/tvHarga"/>
+                        android:text="Total"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        />
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_15sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:background="@drawable/container_edittex"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:id="@+id/tvTotalHarga"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Penjatahan"
+                        android:text="Dibayar"
+                        android:layout_marginTop="@dimen/_5sdp"
                         android:textColor="@color/black"/>
 
-                    <EditText
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="230.000"
-                        android:textSize="20sp"
-                        android:id="@+id/etJatah"/>
+                        android:padding="@dimen/_10sdp"
+                        android:background="@drawable/container_edittex"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textSize="@dimen/_15sdp"
+                        android:id="@+id/tvDibayar"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -147,12 +223,13 @@
                         android:text="Sisa"
                         android:textColor="@color/black"/>
 
-                    <EditText
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="110.000"
-                        android:textSize="20sp"
-                        android:id="@+id/etSisa"/>
+                        android:textSize="@dimen/_15sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:background="@drawable/container_edittex"
+                        android:id="@+id/tvSisa"/>
 
                     <Button
                         android:layout_width="match_parent"
@@ -164,11 +241,14 @@
                         android:id="@+id/btnKirim"
                         android:background="@drawable/button_shape"/>
 
-                    <Button
+                    <com.google.android.material.button.MaterialButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:text="Back"
+                        app:backgroundTint="@color/abu"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/abu"
                         android:textAllCaps="false"
                         android:id="@+id/btnBack"
                         android:background="@drawable/button_jos"/>

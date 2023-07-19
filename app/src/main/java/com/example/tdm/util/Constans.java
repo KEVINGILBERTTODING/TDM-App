@@ -8,4 +8,5 @@ public class Constans {
     public static final String LOGGED = "logged";
     public static final String username = "username";
     public static final String level = "level";
+    public static final String name = "name";
 }

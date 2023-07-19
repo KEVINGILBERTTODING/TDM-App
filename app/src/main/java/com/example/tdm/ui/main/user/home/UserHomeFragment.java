@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import com.example.tdm.R;
 import com.example.tdm.databinding.FragmentUserHomeFragmenyBinding;
 import com.example.tdm.ui.main.user.barang.BarangFragment;
+import com.example.tdm.ui.main.user.transaksi.TransaksiFragment;
 
 public class UserHomeFragment extends Fragment {
     private FragmentUserHomeFragmenyBinding binding;
@@ -37,6 +38,9 @@ public class UserHomeFragment extends Fragment {
     private void listener() {
         binding.lrBarang.setOnClickListener(View -> {
             replace(new BarangFragment());
+        });
+        binding.lrTransaksi.setOnClickListener(View ->{
+            replace(new TransaksiFragment());
         });
     }
 

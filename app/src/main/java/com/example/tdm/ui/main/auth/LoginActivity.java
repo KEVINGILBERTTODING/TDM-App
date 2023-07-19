@@ -44,6 +44,8 @@ public class LoginActivity extends AppCompatActivity {
 
         if (sharedPreferences.getBoolean(Constans.LOGGED, false)) {
             if (sharedPreferences.getInt(Constans.level, 0) == 1) { // admin
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                finish();
 
             }else if (sharedPreferences.getInt(Constans.level, 0) == 2) { // Karyawan
                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
@@ -84,6 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                                 editor.putString(Constans.USER_ID, response.body().getUserId());
                                 editor.putString(Constans.username, response.body().getUsername());
                                 editor.putInt(Constans.level, 0);
+                                editor.putString(Constans.name, response.body().getName());
                                 editor.apply();
                                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
                                 finish();
